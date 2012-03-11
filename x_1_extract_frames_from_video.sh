@@ -3,7 +3,7 @@
 set -e
 set -x
 
-command -v mplayer
+command -v mplayer2
 
 test -f "$1"
 
@@ -14,4 +14,4 @@ DNAME="${VID_BNAME%.*}"
 
 mkdir -p "${DNAME}"
 cd "${DNAME}"
-mplayer -cache 8192 -vo jpeg "${VID_FNAME}"
+mplayer2 -cache 8192 -vo jpeg "${VID_FNAME}"
